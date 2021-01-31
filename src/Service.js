@@ -20,20 +20,6 @@ const Service = () => {
     LoremPicsum();
   }, []);
 
-  // console.log("second time", photos);
-  const RenderedItems = () => {
-    if (photos.length != null) {
-    } else {
-      console.log("err");
-      DataSet.map((val, ind) => (
-        <CardElement
-          author={DataSet.author}
-          id={DataSet.id}
-          photo={DataSet.download_url || Image}
-        />
-      ));
-    }
-  };
   return (
     <>
       <div className="my-5">
@@ -46,6 +32,7 @@ const Service = () => {
               {photos.map((photo) => {
                 return (
                   <CardElement
+                    key={photo.id}
                     author={photo.author}
                     id={photo.id}
                     photo={photo.download_url}

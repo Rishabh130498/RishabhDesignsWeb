@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Image from "./Images/card1.jpeg";
 
 const CardElement = (props) => {
@@ -10,9 +11,9 @@ const CardElement = (props) => {
           <div className="card-body">
             <h5 className="card-title">{`#${props.id}` || "Title"}</h5>
             <p className="card-text">{props.author || "Author Name"}</p>
-            <a href="#" className="btn btn-primary">
+            <Link to="/" className="btn btn-primary">
               See Pricing !
-            </a>
+            </Link>
           </div>
         </div>
       </div>
